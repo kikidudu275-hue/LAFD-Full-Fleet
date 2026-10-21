@@ -1,0 +1,43 @@
+print("=== LAFD FULL FLEET ===\n")
+print("List: engine, truck, squad, ambulance, battalion, hazmat, usarr, brush, helicopter, boat")
+print()
+
+v = input("Which LAFD vehicle? : ").lower().strip()
+
+# Database
+fleet = {
+
+"engine": ["LAFD Engine - Seagrave Marauder", "Role: Fire Attack, 1500 gallons/min", "Station: Everywhere - 106 stations"],
+
+"truck": ["LAFD Tiller Truck - 100ft Ladder", "Role: Ladder, High-Rise Rescue", "Fun: 2 Drivers, 57ft Long"],
+
+"squad": ["LAFD Squad - Ford F-550 Rescue", "Role: Heavy Rescue, extrication", "Fun: Jaws hydraulic tools"],
+
+ambulance": ["LAFD Rescue Ambulance RA", "Role: 85% of calls = medical", "Fun: RA-1 to RA-110, ALS"],
+
+battalion": ["LAFD Battalion Chief SUV", "Role: Commands 6-8 stations", "Model: Red Chevy Suburban"],
+
+hazmat": ["LAFD HazMat Squad", "Role: Chemicals, WMD", "Base: Station 87 - Harbor"],
+
+usarr": ["LAFD USAR - Urban Search & Rescue", "Role: Collapses, earthquakes", "Fun: FEMA USA Team"],
+
+brush": ["LAFD Brush Patrol - 4x4", "Role: Hollywood Hills wildfires", "Model: Ford F-350 4x4 + 300 gallons"],
+
+helicopter": ["LAFD Air Ops - AW139", "Role: 400-gallon water drop, rescue", "Base: Van Nuys - 6 helicopters"],
+
+"boat": ["LAFD Fire Boat - Port of LA", "Role: Boat fires, port", "Name: Boat 1 & 2 - 10,000 gallons/min"]
+
+}
+
+if v in fleet:
+
+print(f"\n--- {v.upper()} ---")
+
+for info in fleet[v]:
+
+print(info)
+else:
+
+print(f"\nI don't know '{v}'")
+
+print("Try: engine, truck, squad, ambulance, battalion, hazmat, usarr, brush, helicopter, boat") 
